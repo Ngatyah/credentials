@@ -12,6 +12,7 @@ const Login = (props) => {
   const [formIsValid, setFormIsValid] = useState(false);
 
   useEffect(() => {
+    console.log("Mic test")
     setFormIsValid(
       enteredEmail.includes('@') && enteredPassword.trim().length > 6
     );

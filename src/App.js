@@ -19,7 +19,7 @@ function App() {
     }
   }, [])
 
-  setTimeout(alert("Hello"), 300000)
+
 
 
 
@@ -38,8 +38,13 @@ function App() {
 
   return (
 
-    <AuthContext.Provider>
-      <MainHeader isAuthenticated={isLoggedIn} onLogout={logoutHandler} />
+    <AuthContext.Provider value={
+      {
+        isLoggedIn: loginHandler,
+        onLogout: logoutHandler
+      }
+    }>
+      <MainHeader />
       <main>
         {!isLoggedIn && <Login onLogin={loginHandler} />}
         {isLoggedIn && <Home onLogout={logoutHandler} />}
