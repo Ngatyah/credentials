@@ -6,11 +6,11 @@ import AuthContext from '../../store/auth-context';
 import Button from '../UI/Button/Button';
 
 const Home = (props) => {
-  const Authcxt = useContext(AuthContext)
+  const AuthCxt = useContext(AuthContext)
   return (
     <Card className={classes.home}>
       <h1>Welcome back!</h1>
-      <Button onClick={Authcxt.onLogout}>Logout</Button>
+      <Button onClick={AuthCxt.onLogout}>Logout</Button>
     </Card>
   );
 };
