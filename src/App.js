@@ -13,8 +13,8 @@ function App() {
     <React.Fragment>
       <MainHeader />
       <main>
-        {!cxt.isLoggedIn && <Login onLogin={cxt.loginHandler} />}
-        {cxt.isLoggedIn && <Home onLogout={cxt.logoutHandler} />}
+        {!cxt.isLoggedIn && <Login />}
+        {cxt.isLoggedIn && <Home />}
       </main>
     </React.Fragment>
 
